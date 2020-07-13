@@ -1,0 +1,21 @@
+spring:
+
+  datasource:
+    name: jtsys
+    url: jdbc:mysql://localhost:3306/jtsys?useLegacyDatetimeCode=false&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=GMT%2b8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  application:
+    name: product-server
+
+server:
+  port: 1008
+  servlet:
+    context-path: /product
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5060/eureka/eureka
