@@ -10,9 +10,9 @@ public class Product {
     private String email;
 
     public Product(){
-        this.name="fld";
+        this.name="ppc";
         this.age=23;
-        this.add="南京栖霞区";
-        this.email="没有";
+        this.add="南京秦淮区";
+        this.email="null";
     }
 }
