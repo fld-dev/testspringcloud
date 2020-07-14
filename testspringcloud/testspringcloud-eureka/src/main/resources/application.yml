@@ -7,6 +7,7 @@ spring:
   application:
     name: eureka-server
 
+
 eureka:
   client:
     #是否启用湖区注册服务信息，因为这是一个单节点的eureka-server，不需要同步其他eureka-server中的数据，所以设置为false
