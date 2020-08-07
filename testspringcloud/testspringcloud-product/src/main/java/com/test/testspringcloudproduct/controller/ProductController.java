@@ -9,6 +9,6 @@ public class ProductController {
     @RequestMapping("getProduct")
     public String getProduct(){
         Product product = new Product();
-        return product.toString();
+        return product.toString()+"我是8083端口";
     }
 }

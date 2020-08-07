@@ -1,0 +1,13 @@
+
+server:
+  port: 8089 #Tomcat端口
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  dubbo:
+    application:
+      name: springboot-dubbo-demo
+    registry:
+      address: zookeeper://localhost
+      port: 2181
+    scan: com.test.testdubbo.controller #要扫描的包路径

@@ -1,26 +1,19 @@
 server:
-  port: 5060
-  servlet:
-    context-path: /eureka
-
-spring:
-  application:
-    name: eureka-server
-
+  port: 8081
 
 eureka:
-  client:
-    #是否启用湖区注册服务信息，因为这是一个单节点的eureka-server，不需要同步其他eureka-server中的数据，所以设置为false
-    fetch-registry: false
-    #表示是否向eureka中注册服务，即是否向eureka中注册自己，默认为true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost:5060/eureka/eureka
   instance:
-    hostname: localhost
-  server:
-    #关闭自我保护，
-    enable-self-preservation: false
-    #扫描失效服务的间隔时间。默认为60*1000单位为毫秒
-    eviction-interval-timer-in-ms: 10000
+    hostname: eureka-8081.com #eureka-8081.com:8081
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://eureka-8082.com:8082/eureka/
+
+
+
+
+
+
 

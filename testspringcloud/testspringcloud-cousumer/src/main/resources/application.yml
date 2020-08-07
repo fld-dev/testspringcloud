@@ -1,22 +1,12 @@
 
 server:
-  servlet:
-    #  定义项目的访问访问路径
-    context-path: /consumer
-    #定义端口号
-  port: 1010
+  port: 8084
+
 spring:
-  #  下面是整合redis使用的配置
-  #  redis:
-  #    cluster:
-  #      expire-seconds: 120
-  #      command-timeout: 5000
-  #      nodes:
-  #  namenode22:6379,datanode23:6379,datanode24:6379,datanode25:6379,datanode26:6379,datanode27:6379
 
   datasource:
     name: jtsys
-    url: jdbc:mysql://localhost:3306/jtsys?useLegacyDatetimeCode=false&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=GMT%2b8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull
+    url: jdbc:mysql://localhost:3306/gw_game_ppc?useLegacyDatetimeCode=false&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=GMT%2b8&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -26,5 +16,6 @@ spring:
     name: consumer-server
 eureka:
   client:
+    register-with-eureka: false
     service-url:
-      defaultZone: http://localhost:5060/eureka/eureka
+      defaultZone: http://eureka-8081.com:8081/eureka,http://eureka-8082.com:8082/eureka
