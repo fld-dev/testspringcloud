@@ -13,7 +13,7 @@ spring:
 
 
   application:
-    name: consumer-server
+    name: consumer-server-8084
 eureka:
   client:
     register-with-eureka: false

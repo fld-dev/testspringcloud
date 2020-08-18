@@ -20,13 +20,6 @@
     </properties>
 
     <dependencies>
-<!--    将entity依赖添加到product项目中    -->
-        <dependency>
-            <groupId>com.test</groupId>
-            <artifactId>testspringcloud-entity</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
         <!--  添加springboot fegin依赖，product项目即可以作为生产者，又可以作为消费者-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
