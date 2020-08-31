@@ -18,7 +18,6 @@ import java.util.Map;
 //这两个注解都是让eureka发现服务，并将服务注册到eureka上的注解
 @EnableEurekaClient//相同点：都能让注册中心eureka发现，并将服务注册到eureka
 @EnableFeignClients//不同点：@EnableFeignClients表示开启Feign客户端
-@EnableCircuitBreaker//用来开启断路器功能
 @MapperScan(basePackages = {"com.test.testspringcloudproduct.mapper"})
 
 public class TestspringcloudProductApplication {

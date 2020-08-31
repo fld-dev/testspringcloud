@@ -4,6 +4,7 @@ server:
 eureka:
   instance:
     hostname: eureka-8081.com #eureka-8081.com:8081
+    prefer-ip-address: true
   client:
     fetch-registry: false
     register-with-eureka: false

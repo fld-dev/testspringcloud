@@ -1,0 +1,32 @@
+#开启熔断机制
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      defautl:
+        connectTimeout: 2000
+        readTimeout: 2000
+
+ribbon:
+  eureka:
+    enabled: true #开启eureka与ribbon的集成
+  hystrix:
+    enabled: false #暂不开启熔断机制
+  ConnectionTimeout: 20000 #设置ribbon默认的超时时间
+  ReadTimeout: 20000 #设置ribbon默认的超时时间
+  OkToRetryOnAllOperations: true #是否开启重试
+  MaxAutoRetriesNextServer: 3 #重试的时候实列切换次数
+  MaxAutoRetries: 2 #每个实例重试次数
+
+hystrix:
+  threadpool:
+    product-server: #指定服务的配置
+      coreSize: 20
+      maxQueueSize: 200
+      queueSizeRejectionThreshold: 3
+    default: #默认的配置
+      coreSize: 10
+      maxQueueSize: 200
+      queueSizeRejectionThreshold: 2
+
